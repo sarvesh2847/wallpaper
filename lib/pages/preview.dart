@@ -40,19 +40,31 @@ class _previewState extends State<preview> {
               ),
             ),
           ),
-          body: Center(
-            child: SingleChildScrollView(
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.white,
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/1.jpeg'),
-                        fit: BoxFit.fill)),
-                width: 256,
-                height: 512,
+          body: Column(
+            children: [
+              Center(
+                child: SingleChildScrollView(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.white,
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/2.jpeg'),
+                            fit: BoxFit.fitHeight)),
+                    width: 256,
+                    height: 512,
+                  ),
+                  padding: EdgeInsets.all(42),
+                ),
               ),
-            ),
+              ElevatedButton(
+                  style: ButtonStyle(),
+                  onPressed: () {},
+                  child: Text(
+                    "Download",
+                    style: TextStyle(fontSize: 22, color: Colors.black),
+                  ))
+            ],
           )),
     );
   }

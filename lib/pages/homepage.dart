@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'preview.dart';
-void main(){
+
+void main() {
   runApp(homepage());
 }
+
 class homepage extends StatelessWidget {
   const homepage({super.key});
 
@@ -12,10 +14,8 @@ class homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      
       home: SafeArea(
         child: Scaffold(
-        
           extendBody: true,
           bottomNavigationBar: FloatingNavbar(
             margin: EdgeInsets.all(0),
@@ -25,7 +25,8 @@ class homepage extends StatelessWidget {
             },
             currentIndex: 0,
             items: [
-              FloatingNavbarItem(icon: EvaIcons.gridOutline, title: 'Wallpaper'),
+              FloatingNavbarItem(
+                  icon: EvaIcons.gridOutline, title: 'Wallpaper'),
               FloatingNavbarItem(icon: EvaIcons.compass, title: 'Explore'),
               FloatingNavbarItem(icon: EvaIcons.settings, title: 'Settings'),
             ],
@@ -33,40 +34,34 @@ class homepage extends StatelessWidget {
           body: Stack(
             children: [
               Container(
-                decoration: BoxDecoration(
-                    color: Colors.black
-                ),
+                decoration: BoxDecoration(color: Colors.black),
               ),
               SingleChildScrollView(
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment:  CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                
                         children: [
                           InkWell(
                             child: Container(
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
                                   color: Colors.white,
-                                image: DecorationImage(
-                                    image: AssetImage('assets/images/2.jpeg'),
-                                fit: BoxFit.fitHeight)
-                
-                
-                              ),
+                                  image: DecorationImage(
+                                      image: AssetImage('assets/images/2.jpeg'),
+                                      fit: BoxFit.fitHeight)),
                               width: 150,
                               height: 300,
-                
-                
                             ),
-                            onTap: (){
+                            onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => preview()),);
+                                MaterialPageRoute(
+                                    builder: (context) => preview()),
+                              );
                             },
                           ),
                           SizedBox(
@@ -74,22 +69,21 @@ class homepage extends StatelessWidget {
                           ),
                           InkWell(
                             child: Container(
-                             decoration: BoxDecoration(
-                               borderRadius: BorderRadius.circular(12),
-                               color: Colors.white,
-                               image: DecorationImage(
-                                   image: AssetImage('assets/images/1.jpeg'),
-                               fit: BoxFit.fill)
-                             ),
-                             width: 150,
-                             height: 300,
-                
-                
-                               ),
-                            onTap: (){
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                      image: AssetImage('assets/images/1.jpeg'),
+                                      fit: BoxFit.fill)),
+                              width: 150,
+                              height: 300,
+                            ),
+                            onTap: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => preview()),);
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => preview()),
+                              );
                             },
                           ),
                         ],
@@ -107,17 +101,16 @@ class homepage extends StatelessWidget {
                                   color: Colors.white,
                                   image: DecorationImage(
                                       image: AssetImage('assets/images/3.jpeg'),
-                                      fit: BoxFit.fill)
-                              ),
+                                      fit: BoxFit.fill)),
                               width: 150,
                               height: 300,
-                
-                
                             ),
-                            onTap: (){
+                            onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => preview()),);
+                                MaterialPageRoute(
+                                    builder: (context) => preview()),
+                              );
                             },
                           ),
                           SizedBox(
@@ -130,17 +123,16 @@ class homepage extends StatelessWidget {
                                   color: Colors.white,
                                   image: DecorationImage(
                                       image: AssetImage('assets/images/4.jpeg'),
-                                      fit: BoxFit.fill)
-                              ),
+                                      fit: BoxFit.fill)),
                               width: 150,
                               height: 300,
-                
-                
                             ),
-                            onTap: (){
+                            onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => preview()),);
+                                MaterialPageRoute(
+                                    builder: (context) => preview()),
+                              );
                             },
                           ),
                         ],
@@ -149,15 +141,10 @@ class homepage extends StatelessWidget {
                   ),
                 ),
               ),
-        
-        
             ],
           ),
-        
         ),
       ),
-
     );
   }
 }
-
